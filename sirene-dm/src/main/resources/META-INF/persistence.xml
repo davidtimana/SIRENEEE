@@ -7,10 +7,67 @@
 	<persistence-unit name="sirenePU"  transaction-type="JTA">		
 		<jta-data-source>java:/jboss/sireneDS</jta-data-source>
 		<class>com.david.sirene.entities.Prueba</class>
+		<class>com.david.sirene.EntidadesxHibernate.Acudiente</class>
+		<class>com.david.sirene.EntidadesxHibernate.AnioLectivo</class>
+		<class>com.david.sirene.EntidadesxHibernate.Area</class>
+		<class>com.david.sirene.EntidadesxHibernate.Calendario</class>
+		<class>com.david.sirene.EntidadesxHibernate.Capacidades</class>
+		<class>com.david.sirene.EntidadesxHibernate.CargaAcademica</class>
+		<class>com.david.sirene.EntidadesxHibernate.ConfigSede</class>
+		<class>com.david.sirene.EntidadesxHibernate.Departamento</class>
+		<class>com.david.sirene.EntidadesxHibernate.DirectorGrupo</class>
+		<class>com.david.sirene.EntidadesxHibernate.Discapacidades</class>
+		<class>com.david.sirene.EntidadesxHibernate.Docentes</class>
+		<class>com.david.sirene.EntidadesxHibernate.Documento</class>
+		<class>com.david.sirene.EntidadesxHibernate.Domicilio</class>
+		<class>com.david.sirene.EntidadesxHibernate.Establecimiento</class>
+		<class>com.david.sirene.EntidadesxHibernate.Estados</class>
+		<class>com.david.sirene.EntidadesxHibernate.Estrato</class>
+		<class>com.david.sirene.EntidadesxHibernate.Estudiantes</class>
+		<class>com.david.sirene.EntidadesxHibernate.Etnias</class>
+		<class>com.david.sirene.EntidadesxHibernate.Experiencia</class>
+		<class>com.david.sirene.EntidadesxHibernate.FormacionAcademica</class>
+		<class>com.david.sirene.EntidadesxHibernate.Genero</class>
+		<class>com.david.sirene.EntidadesxHibernate.Grado</class>
+		<class>com.david.sirene.EntidadesxHibernate.GradoEscalafon</class>
+		<class>com.david.sirene.EntidadesxHibernate.GradoGrupo</class>
+		<class>com.david.sirene.EntidadesxHibernate.GradoMateria</class>
+		<class>com.david.sirene.EntidadesxHibernate.Grupo</class>
+		<class>com.david.sirene.EntidadesxHibernate.Indicadores</class>
+		<class>com.david.sirene.EntidadesxHibernate.Jornada</class>
+		<class>com.david.sirene.EntidadesxHibernate.Materias</class>
+		<class>com.david.sirene.EntidadesxHibernate.Matricula</class>
+		<class>com.david.sirene.EntidadesxHibernate.Municipio</class>
+		<class>com.david.sirene.EntidadesxHibernate.NivelEscolaridad</class>
+		<class>com.david.sirene.EntidadesxHibernate.NovedadInstitucion</class>
+		<class>com.david.sirene.EntidadesxHibernate.Observaciones</class>
+		<class>com.david.sirene.EntidadesxHibernate.Pais</class>
+		<class>com.david.sirene.EntidadesxHibernate.Parentesco</class>
+		<class>com.david.sirene.EntidadesxHibernate.Periodo</class>
+		<class>com.david.sirene.EntidadesxHibernate.Persona</class>
+		<class>com.david.sirene.EntidadesxHibernate.Planilla</class>
+		<class>com.david.sirene.EntidadesxHibernate.PlanillaEvaluacionIndicador</class>
+		<class>com.david.sirene.EntidadesxHibernate.PropiedadJuridica</class>
+		<class>com.david.sirene.EntidadesxHibernate.Resguardo</class>
+		<class>com.david.sirene.EntidadesxHibernate.Roles</class>
+		<class>com.david.sirene.EntidadesxHibernate.Sector</class>
+		<class>com.david.sirene.EntidadesxHibernate.Sede</class>
+		<class>com.david.sirene.EntidadesxHibernate.Sisben</class>
+		<class>com.david.sirene.EntidadesxHibernate.TipoDocumento</class>
+		<class>com.david.sirene.EntidadesxHibernate.TipoPersona</class>
+		<class>com.david.sirene.EntidadesxHibernate.TipoSangre</class>
+		<class>com.david.sirene.EntidadesxHibernate.UbicacionCurso</class>
+		<class>com.david.sirene.EntidadesxHibernate.Usuarios</class>
+		<class>com.david.sirene.EntidadesxHibernate.Valoracion</class>
+		<class>com.david.sirene.EntidadesxHibernate.VictimaConflicto</class>
+		<class>com.david.sirene.EntidadesxHibernate.Zona</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 	    <properties>
 			<!-- Properties for Hibernate -->
-			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
-			<property name="hibernate.show_sql" value="false" />
+			<!--<property name="hibernate.hbm2ddl.auto" value="create-drop" />-->
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			 
 		</properties>
 	</persistence-unit>
 </persistence>
