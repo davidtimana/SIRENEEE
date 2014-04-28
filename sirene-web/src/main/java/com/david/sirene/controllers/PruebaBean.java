@@ -1,32 +1,32 @@
 package com.david.sirene.controllers;
 
-import java.io.Serializable;
-
-import javax.enterprise.context.SessionScoped;
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
-import javax.faces.event.ActionEvent;
-import javax.inject.Inject;
-import javax.inject.Named;
-
 import com.david.sirene.bo.PruebaBO;
-import com.david.sirene.entities.Prueba;
+import java.io.Serializable;
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 /*
  * @author Eyder Albeiro Ascuntar Rosales
  */
 
-@Named
+@ManagedBean(name="pruebaBean")
 @SessionScoped
 public class PruebaBean implements Serializable {
 
 	private static final long serialVersionUID = 6437541572047498821L;
-	@Inject
-	private PruebaBO pruebaBO;
+        
+	
 
 	private String firstname;
 
 	private String surname;
+        
+        @PostConstruct
+        public void init(){
+            System.out.println("***** Iniciando PruebaBean");
+        }
 
 	public String getFirstname() {
 		return firstname;
@@ -44,8 +44,9 @@ public class PruebaBean implements Serializable {
 		this.surname = surname;
 	}
 
-	public void savePerson(ActionEvent actionEvent) {
-		Prueba pr = new Prueba(firstname, surname);
+	public void savePerson() {
+            System.out.println("entre al save person");
+		/*Prueba pr = new Prueba(firstname, surname);
 		if (pruebaBO.pruebaBO(pr) == true) {
 			FacesContext.getCurrentInstance().addMessage(
 					null,
@@ -56,6 +57,6 @@ public class PruebaBean implements Serializable {
 					null,
 					new FacesMessage("Error al registrar Usuario  " + firstname
 							+ " " + surname + "!"));
-		}
+		}*/
 	}
 }

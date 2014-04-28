@@ -15,7 +15,7 @@
 			<p:messages id="msgs" />
 			<h:panelGrid columns="3">
 				<h:outputLabel for="firstname" value="#{msj_web.primer_nombre}: *" />
-				<p:inputText id="firstname" value="#{pruebaBean.firstname}"	required="true" label="Firstname">
+                                <p:inputText id="firstname" value="#{pruebaBean.firstname}"	required="true" label="Firstname">
 					<f:validateLength minimum="2" />
 				</p:inputText>
 				<p:message for="firstname" display="icon" />
@@ -27,7 +27,7 @@
 				<p:message for="surname" id="msgSurname" display="icon" />
 			</h:panelGrid>
 			<p:commandButton id="btn" value="Save" update="panel"
-				actionListener="#{pruebaBean.savePerson}" />
+                                         actionListener="#{pruebaBean.savePerson()}" process="@this" />
 		</p:panel>
 	</h:form>
 </h:body>
